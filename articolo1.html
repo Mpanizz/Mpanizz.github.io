@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il giorno che Power BI mi ha cambiato il lavoro · Marco Panizzari</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --ink: #1a1612;
+      --muted: #7a7068;
+      --accent: #1a5c9e;
+      --accent-light: #e8f0f8;
+      --border: #e0d9d0;
+      --card-bg: #ffffff;
+      --max-w: 680px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg);
+    }
+
+    .header-name {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .header-name:hover { color: var(--accent); }
+
+    .back-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color .2s;
+    }
+
+    .back-link:hover { color: var(--accent); }
+
+    /* ── ARTICLE ── */
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .post-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 4px;
+      padding: 0.1rem 0.5rem;
+    }
+
+    .article-date {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .article-intro {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 1.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .article-body p {
+      margin-bottom: 1.4rem;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .article-body h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 2.5rem 0 0.9rem;
+    }
+
+    .article-body strong { color: var(--ink); font-weight: 500; }
+
+    .article-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    .article-footer {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .article-footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .article-footer a:hover { text-decoration: underline; }
+
+    /* ── BACK BUTTON ── */
+    .back-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .back-section a {
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color .2s;
+    }
+
+    .back-section a:hover { color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 1.55rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="header-name" href="index.html">Marco Panizzari</a>
+  <a class="back-link" href="index.html">← Tutti gli articoli</a>
+</header>
+
+<main>
+
+  <div class="article-meta">
+    <span class="post-tag">Business Intelligence</span>
+    <span class="article-date">Marzo 2025</span>
+  </div>
+
+  <h1>Il giorno che Power BI mi ha cambiato il lavoro</h1>
+
+  <p class="article-intro">
+    Campo e dati non sono opposti. Sono la stessa cosa vista da due angolazioni diverse.
+  </p>
+
+  <div class="article-body">
+
+    <p>
+      Lavoro nelle vendite da tutta la vita. Figlio d'arte, ho fatto quasi ogni ruolo che esiste
+      in una rete commerciale: dal jolly — quello che tappa i buchi, che va dove serve, che impara
+      guardando gli altri — fino a coordinare l'intera rete Italia.
+    </p>
+
+    <p>
+      Ho sempre creduto che vendere fosse una questione di relazione, di fiuto, di presenza.
+      I numeri erano roba da ufficio. Io stavo sul campo.
+    </p>
+
+    <p>Poi, nel 2021, qualcuno mi ha messo davanti a Power BI.</p>
+
+    <h2>La prima reazione</h2>
+
+    <p>
+      Non fu amore a prima vista. Ricordo che guardavo lo schermo pensando:
+      <em>un altro strumento che devo imparare</em>. Avevo già visto dashboard, report Excel
+      complicati, presentazioni piene di grafici che non dicevano niente.
+    </p>
+
+    <p>Ma questa volta era diverso.</p>
+
+    <p>
+      Per la prima volta avevo davanti <strong>i miei dati</strong> — quelli della mia rete,
+      dei miei mercati, dei miei venditori — presentati in un modo che raccontava una storia.
+      Non numeri su una tabella. Una storia.
+    </p>
+
+    <p>
+      Ho passato il resto del pomeriggio a fare domande allo schermo. <em>Perché questa zona
+      va bene e quella no? Questo venditore ha un calo — ma da quando esattamente? Questo
+      cliente compra meno — ma cosa comprava prima?</em>
+    </p>
+
+    <p>
+      Le domande non erano nuove. Le facevo da anni, a memoria, a istinto.
+      La differenza era che adesso avevo le risposte in trenta secondi.
+    </p>
+
+    <h2>Cosa ho capito quel giorno</h2>
+
+    <p>
+      Ho capito che per anni avevo preso decisioni con metà delle informazioni che avevo a
+      disposizione.
+    </p>
+
+    <p>
+      Non perché fossi pigro o poco attento. Ma perché <strong>i dati c'erano, solo non erano
+      accessibili</strong>. Stavano sepolti in gestionali, in fogli Excel mandati via mail,
+      in report mensili che arrivavano quando il momento per agire era già passato.
+    </p>
+
+    <p>
+      Power BI non mi ha dato nuovi dati. Mi ha dato accesso a quelli che già possedevo,
+      nel momento in cui ne avevo bisogno.
+    </p>
+
+    <p>
+      Questa è la cosa che cerco di spiegare ogni volta che parlo di Business Intelligence
+      con chi non la conosce: non si tratta di tecnologia. Si tratta di
+      <strong>velocità di comprensione</strong>.
+    </p>
+
+    <h2>Il campo visto dai dati</h2>
+
+    <p>
+      C'è una cosa che ho scoperto lavorando su modelli e report: i dati raccontano esattamente
+      quello che vedi sul campo, ma con una precisione che l'occhio umano non riesce a raggiungere.
+    </p>
+
+    <p>
+      Quando un Area Manager mi dice <em>"quella zona sta rallentando"</em>, spesso i dati lo
+      avevano già detto — due o tre settimane prima. Il segnale era lì, piccolo, nascosto tra
+      mille altre righe. Il campo lo percepisce come sensazione. Il dato lo misura.
+    </p>
+
+    <p>Oggi uso entrambi. La sensazione mi dice dove guardare. Il dato mi dice cosa vedere.</p>
+
+    <h2>Dove sono adesso</h2>
+
+    <p>
+      Dal 2021 mi occupo di BI come Project Manager, oltre che come costruttore di modelli
+      semantici e report per tutta l'azienda. Nel frattempo continuo a fare il mio lavoro
+      principale: guidare la rete vendita Italia insieme al mio team di Area Manager.
+    </p>
+
+    <p>
+      Non ho smesso di stare sul campo. Ho solo aggiunto uno strumento che mi permette
+      di capirlo meglio.
+    </p>
+
+    <p>
+      Il mio lavoro è diventato un viaggio continuo tra questi due mondi.
+      E vi posso assicurare: è il viaggio più interessante che abbia mai fatto.
+    </p>
+
+    <hr class="article-divider">
+
+    <p class="article-footer">
+      Hai domande su Power BI o su come usare i dati in una rete commerciale?
+      Scrivimi su <a href="https://www.linkedin.com/in/marcopanizzari/" target="_blank">LinkedIn</a>.
+    </p>
+
+  </div>
+
+  <div class="back-section">
+    <a href="index.html">← Torna a tutti gli articoli</a>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 Marco Panizzari ·
+  Ospitato su <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+</footer>
+
+</body>
+</html>
