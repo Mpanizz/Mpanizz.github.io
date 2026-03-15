@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marco Panizzari · Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --ink: #1a1612;
+      --muted: #7a7068;
+      --accent: #1a5c9e;
+      --accent-light: #e8f0f8;
+      --border: #e0d9d0;
+      --card-bg: #ffffff;
+      --max-w: 680px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.9rem;
+      background: var(--bg);
+    }
+
+    .avatar-wrap {
+      width: 90px; height: 90px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--border);
+      background: var(--accent-light);
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .avatar-wrap img { width: 100%; height: 100%; object-fit: cover; }
+
+    .avatar-placeholder {
+      font-size: 1.9rem;
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .site-name {
+      font-family: 'Lora', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      text-align: center;
+    }
+
+    .site-tagline {
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      max-width: 420px;
+      font-weight: 300;
+    }
+
+    nav { display: flex; gap: 1.8rem; margin-top: 0.3rem; }
+
+    nav a {
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--muted);
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+
+    nav a:hover, nav a.active { color: var(--accent); }
+
+    .social-links { display: flex; gap: 0.7rem; margin-top: 0.1rem; }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: var(--border);
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: background .2s, color .2s;
+    }
+
+    .social-links a:hover { background: var(--accent); color: #fff; }
+
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .about-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.8rem 2.2rem;
+      margin-bottom: 3rem;
+    }
+
+    .about-section h2 {
+      font-family: 'Lora', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.7rem;
+    }
+
+    .about-section p {
+      color: var(--muted);
+      font-size: 0.97rem;
+      line-height: 1.75;
+    }
+
+    .about-section p + p { margin-top: 0.8rem; }
+    .about-section a { color: var(--accent); text-decoration: none; }
+    .about-section a:hover { text-decoration: underline; }
+
+    .topics { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+
+    .topic-tag {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 20px;
+      padding: 0.25rem 0.85rem;
+    }
+
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 1.4rem;
+    }
+
+    .post-list { display: flex; flex-direction: column; }
+
+    .post-item {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1.2rem;
+      align-items: start;
+      padding: 1.4rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .post-item:last-child { border-bottom: none; }
+
+    .post-date { font-size: 0.82rem; color: var(--muted); padding-top: 0.15rem; white-space: nowrap; }
+
+    .post-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 4px;
+      padding: 0.1rem 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .post-title {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+      transition: color .2s;
+    }
+
+    .post-item:hover .post-title { color: var(--accent); }
+
+    .post-excerpt { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 500px) {
+      .post-item { grid-template-columns: 1fr; gap: 0.3rem; }
+      nav { gap: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="avatar-wrap">
+    <!-- Per aggiungere la tua foto: carica "foto.jpg" in una cartella assets/ e decommenta la riga sotto -->
+    <!-- <img src="assets/foto.jpg" alt="Marco Panizzari"> -->
+    <span class="avatar-placeholder">MP</span>
+  </div>
+
+  <h1 class="site-name">Marco Panizzari</h1>
+  <p class="site-tagline">Responsabile Vendite Italia · Milano</p>
+
+  <nav>
+    <a href="#articoli" class="active">Articoli</a>
+    <a href="#chi-sono">Chi sono</a>
+  </nav>
+
+  <div class="social-links">
+    <a href="https://www.linkedin.com/in/marcopanizzari/" title="LinkedIn" target="_blank">in</a>
+    <a href="mailto:tua@email.com" title="Email">✉</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="about-section" id="chi-sono">
+    <h2>Chi sono</h2>
+    <p>
+      Mi divido tra il campo e l'analisi dei dati: credo che una buona strategia commerciale nasca
+      dall'incontro tra relazione umana e lettura attenta dei numeri. Credo nella formazione continua
+      e nello scambio di idee come leva di crescita, per sé e per i team che si guidano.
+    </p>
+    <p>
+      Su questo blog scrivo di quello che mi appassiona e che vivo ogni giorno nel lavoro.
+      Trovi i miei contatti su
+      <a href="https://www.linkedin.com/in/marcopanizzari/" target="_blank">LinkedIn</a>.
+    </p>
+    <div class="topics">
+      <span class="topic-tag">Business Intelligence</span>
+      <span class="topic-tag">Sviluppo Commerciale</span>
+      <span class="topic-tag">Crescita Personale</span>
+    </div>
+  </section>
+
+  <section id="articoli">
+    <h2 class="section-title">Ultimi articoli</h2>
+
+    <div class="post-list">
+
+      <a class="post-item" href="#">
+        <span class="post-date">Mar 2025</span>
+        <div class="post-content">
+          <span class="post-tag">Business Intelligence</span>
+          <div class="post-title">Come i dati hanno cambiato il mio modo di vendere</div>
+          <div class="post-excerpt">Da venditore "a istinto" a uno che guarda i numeri ogni mattina: cosa è cambiato, cosa ho guadagnato e cosa ho perso per strada.</div>
+        </div>
+      </a>
+
+      <a class="post-item" href="#">
+        <span class="post-date">Feb 2025</span>
+        <div class="post-content">
+          <span class="post-tag">Sviluppo Commerciale</span>
+          <div class="post-title">Costruire un team commerciale che funziona davvero</div>
+          <div class="post-excerpt">Non basta trovare brave persone. Bisogna creare un sistema in cui quelle persone possano esprimersi. Ecco quello che ho imparato.</div>
+        </div>
+      </a>
+
+      <a class="post-item" href="#">
+        <span class="post-date">Gen 2025</span>
+        <div class="post-content">
+          <span class="post-tag">Crescita Personale</span>
+          <div class="post-title">Formazione continua: perché non smetto mai di studiare</div>
+          <div class="post-excerpt">In un mercato che cambia ogni anno, fermarsi a imparare non è un lusso — è l'unico modo per restare rilevanti.</div>
+        </div>
+      </a>
+
+      <a class="post-item" href="#">
+        <span class="post-date">Dic 2024</span>
+        <div class="post-content">
+          <span class="post-tag">Business Intelligence</span>
+          <div class="post-title">KPI che contano: come scegliere le metriche giuste per il commerciale</div>
+          <div class="post-excerpt">Misurare tutto non significa capire tutto. Una guida pratica per selezionare gli indicatori che guidano davvero le decisioni.</div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 Marco Panizzari ·
+  Ospitato su <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+</footer>
+
+</body>
+</html>
