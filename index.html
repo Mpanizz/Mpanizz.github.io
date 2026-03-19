@@ -30,7 +30,6 @@
       line-height: 1.7;
     }
 
-    /* ── HEADER ── */
     header {
       border-bottom: 1px solid var(--border);
       padding: 2.5rem 1.5rem 2rem;
@@ -104,7 +103,6 @@
 
     .social-links a:hover { background: var(--accent); color: #fff; }
 
-    /* ── MAIN ── */
     main {
       max-width: var(--max-w);
       margin: 0 auto;
@@ -114,7 +112,6 @@
       gap: 3.5rem;
     }
 
-    /* ── SECTION HEADER ── */
     .section-label {
       font-family: 'Lora', serif;
       font-size: 0.82rem;
@@ -127,7 +124,6 @@
       border-bottom: 1px solid var(--border);
     }
 
-    /* ── BIO ── */
     .bio p {
       color: var(--muted);
       font-size: 0.97rem;
@@ -135,7 +131,6 @@
     }
 
     .bio p + p { margin-top: 0.9rem; }
-
     .bio a { color: var(--accent); text-decoration: none; }
     .bio a:hover { text-decoration: underline; }
 
@@ -156,65 +151,6 @@
       padding: 0.22rem 0.8rem;
     }
 
-    /* ── PROGETTI ── */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .project-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.4rem 1.5rem;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color .2s, box-shadow .2s;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .project-card:hover {
-      border-color: var(--accent);
-      box-shadow: 0 2px 16px rgba(26,92,158,0.08);
-    }
-
-    .project-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.2rem;
-    }
-
-    .project-title {
-      font-family: 'Lora', serif;
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--ink);
-      line-height: 1.35;
-    }
-
-    .project-desc {
-      font-size: 0.84rem;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-
-    .project-tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      background: var(--accent-light);
-      color: var(--accent);
-      border-radius: 4px;
-      padding: 0.08rem 0.45rem;
-      margin-top: auto;
-      align-self: flex-start;
-    }
-
-    /* ── ARTICOLI ── */
     .post-list { display: flex; flex-direction: column; }
 
     .post-item {
@@ -268,7 +204,6 @@
       line-height: 1.58;
     }
 
-    /* ── FOOTER ── */
     footer {
       text-align: center;
       padding: 2rem 1.5rem;
@@ -280,9 +215,7 @@
     footer a { color: var(--muted); }
     footer a:hover { color: var(--accent); }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 540px) {
-      .projects-grid { grid-template-columns: 1fr; }
       .post-item { grid-template-columns: 1fr; gap: 0.25rem; }
       nav { gap: 1.1rem; }
     }
@@ -361,39 +294,21 @@
     <div class="section-label">Articoli</div>
     <div class="post-list">
 
-      <a class="post-item" href="articolo1.html">
+      <a class="post-item" href="articolo2.html">
         <span class="post-date">Mar 2025</span>
+        <div class="post-content">
+          <span class="post-tag">Crescita Personale</span>
+          <div class="post-title">Il ritorno al mio vecchio registratore: perché la produttività passa (ancora) dall'analogico</div>
+          <div class="post-excerpt">Ho smarrito il mio registratore tascabile. Cercandolo ho ritrovato una lezione sulla produttività che vale ancora oggi.</div>
+        </div>
+      </a>
+
+      <a class="post-item" href="articolo1.html">
+        <span class="post-date">Feb 2025</span>
         <div class="post-content">
           <span class="post-tag">Business Intelligence</span>
           <div class="post-title">Il giorno che Power BI mi ha cambiato il lavoro</div>
           <div class="post-excerpt">Non è stato amore immediato. Ma quando ho capito cosa potevo fare con i dati che già avevo, non sono più riuscito a tornare indietro.</div>
-        </div>
-      </a>
-
-      <a class="post-item" href="#">
-        <span class="post-date">Feb 2025</span>
-        <div class="post-content">
-          <span class="post-tag">Sviluppo Commerciale</span>
-          <div class="post-title">Dal jolly al Capo Rete: cosa ho imparato cambiando ogni ruolo</div>
-          <div class="post-excerpt">Ho fatto quasi tutto quello che si può fare in una rete vendita. Ogni cambio di ruolo mi ha insegnato qualcosa che nessun corso avrebbe potuto darmi.</div>
-        </div>
-      </a>
-
-      <a class="post-item" href="#">
-        <span class="post-date">Gen 2025</span>
-        <div class="post-content">
-          <span class="post-tag">Power BI</span>
-          <div class="post-title">Modelli semantici: perché sono la parte più sottovalutata di Power BI</div>
-          <div class="post-excerpt">Tutti vogliono il report bello. Pochi investono sul modello che ci sta sotto. Eppure è lì che si vince o si perde.</div>
-        </div>
-      </a>
-
-      <a class="post-item" href="#">
-        <span class="post-date">Dic 2024</span>
-        <div class="post-content">
-          <span class="post-tag">Crescita Personale</span>
-          <div class="post-title">Campo e dati: come tengo insieme due mondi che sembrano opposti</div>
-          <div class="post-excerpt">La mattina in riunione con gli Area Manager, il pomeriggio su DAX. Non è schizofrenia — è il lavoro più interessante che abbia mai fatto.</div>
         </div>
       </a>
 
@@ -429,4 +344,8 @@
 
 <footer>
   © 2025 Marco Panizzari ·
-  Ospitato su <a href="https://pages.github.com" target="_blank">GitHub P
+  Ospitato su <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+</footer>
+
+</body>
+</html>
