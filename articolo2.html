@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il ritorno al mio vecchio registratore · Marco Panizzari</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --ink: #1a1612;
+      --muted: #7a7068;
+      --accent: #1a5c9e;
+      --accent-light: #e8f0f8;
+      --border: #e0d9d0;
+      --max-w: 680px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg);
+    }
+
+    .header-name {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .header-name:hover { color: var(--accent); }
+
+    .back-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color .2s;
+    }
+
+    .back-link:hover { color: var(--accent); }
+
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .post-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 4px;
+      padding: 0.1rem 0.5rem;
+    }
+
+    .article-date { font-size: 0.82rem; color: var(--muted); }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .article-intro {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 1.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .article-body p {
+      margin-bottom: 1.4rem;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .article-body h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 2.5rem 0 0.9rem;
+    }
+
+    .article-body strong { color: var(--ink); font-weight: 500; }
+    .article-body em { font-style: italic; }
+
+    .article-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    .article-footer {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .article-footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .article-footer a:hover { text-decoration: underline; }
+
+    .back-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .back-section a {
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color .2s;
+    }
+
+    .back-section a:hover { color: var(--accent); }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 1.55rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="header-name" href="index.html">Marco Panizzari</a>
+  <a class="back-link" href="index.html">← Tutti gli articoli</a>
+</header>
+
+<main>
+
+  <div class="article-meta">
+    <span class="post-tag">Crescita Personale</span>
+    <span class="article-date">Marzo 2025</span>
+  </div>
+
+  <h1>Il ritorno al mio vecchio registratore: perché la produttività passa (ancora) dall'analogico</h1>
+
+  <p class="article-intro">
+    Un oggetto semplice, quasi anacronistico. Eppure la sua perdita mi ha riportato a un ricordo
+    vivido — e a una lezione sulla produttività che vale ancora oggi.
+  </p>
+
+  <div class="article-body">
+
+    <p>
+      Qualche giorno fa ho vissuto una piccola disavventura: ho smarrito il mio vecchio registratore
+      tascabile. Un oggetto semplice, quasi anacronistico, che mi aveva accompagnato per anni.
+      Eppure, proprio quella perdita mi ha riportato alla mente un ricordo vivido: il mio primo
+      affiancamento con un venditore esperto di Roma, Roberto, uno dei tanti Maestri che sto
+      incontrando in Dual Sanitaly S.p.A. Società Benefit.
+    </p>
+
+    <p>
+      Lui aveva un registratore appeso allo specchietto dell'auto. Ogni volta che un'idea gli
+      attraversava la mente, premeva "rec" e incideva un promemoria. Un gesto rapido, naturale,
+      quasi istintivo. Solo qualche mese dopo ho capito quanto fosse potente quella pratica —
+      e mi sono dotato anche io di un piccolo dispositivo.
+    </p>
+
+    <h2>Un secondo cervello che libera il primo</h2>
+
+    <p>
+      È lo stesso principio alla base di <em>Getting Things Done</em> di David Allen o del
+      <em>Second Brain</em> di Tiago Forte. Ma molto prima che questi concetti diventassero
+      popolari, quel venditore aveva già capito tutto: <strong>la mente non è fatta per
+      trattenere informazioni, ma per elaborarle</strong>.
+    </p>
+
+    <p>
+      Creare un luogo esterno dove depositare idee, compiti, intuizioni, così da non costringere
+      il cervello a un continuo sforzo di memoria. Quando smettiamo di "trattenere", iniziamo
+      davvero a "produrre".
+    </p>
+
+    <p>
+      Il registratore, per me, è sempre stato questo: un contenitore fedele, immediato, che mi
+      permette di catturare un pensiero nel momento esatto in cui nasce, senza filtri e senza frizioni.
+    </p>
+
+    <h2>Perché non un'app?</h2>
+
+    <p>
+      Perché la tecnologia, a volte, introduce più passaggi di quanti ne elimini. Perché un'app
+      può distrarre, mentre un registratore non chiede nulla. E perché la sbobinatura — quel
+      momento in cui riascolto e trascrivo — è un passaggio prezioso: mi costringe a riprocessare
+      ogni idea, a raffinarla, a trasformarla da semplice nota vocale a unità di valore.
+    </p>
+
+    <h2>La produttività non è correre: è liberare spazio</h2>
+
+    <p>
+      Ho perso un registratore, ma è riemersa la consapevolezza che <strong>la semplicità non
+      è un limite, è un acceleratore</strong>. Un oggetto analogico può essere più potente
+      di un'app proprio perché non cerca di fare tutto — fa una cosa sola, e la fa bene.
+    </p>
+
+    <p>
+      Ah. Cercando il vecchio recorder ho trovato un cappello cui ero molto affezionato e che
+      avevo dato per perso... Ne devo ancora mangiare di polenta per diventare un po' più
+      ordinato 😅, ma troverò il modo, in questa vita o in un'altra.
+    </p>
+
+    <hr class="article-divider">
+
+    <p class="article-footer">
+      Ti riconosci in questa storia? Scrivimi su
+      <a href="https://www.linkedin.com/in/marcopanizzari/" target="_blank">LinkedIn</a>
+      — mi fa sempre piacere confrontarmi.
+    </p>
+
+  </div>
+
+  <div class="back-section">
+    <a href="index.html">← Torna a tutti gli articoli</a>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 Marco Panizzari ·
+  Ospitato su <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+</footer>
+
+</body>
+</html>
