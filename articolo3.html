@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dai dati alle persone · Marco Panizzari</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --ink: #1a1612;
+      --muted: #7a7068;
+      --accent: #1a5c9e;
+      --accent-light: #e8f0f8;
+      --border: #e0d9d0;
+      --max-w: 680px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg);
+    }
+
+    .header-name {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .header-name:hover { color: var(--accent); }
+
+    .back-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color .2s;
+    }
+
+    .back-link:hover { color: var(--accent); }
+
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .post-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 4px;
+      padding: 0.1rem 0.5rem;
+    }
+
+    .article-date { font-size: 0.82rem; color: var(--muted); }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .article-intro {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 1.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .article-body p {
+      margin-bottom: 1.4rem;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .article-body h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 2.5rem 0 0.9rem;
+    }
+
+    .article-body strong { color: var(--ink); font-weight: 500; }
+    .article-body em { font-style: italic; }
+
+    .article-body ul {
+      list-style: none;
+      margin: 0 0 1.4rem 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .article-body ul li {
+      font-size: 1rem;
+      color: var(--muted);
+      padding-left: 1.2rem;
+      position: relative;
+      line-height: 1.7;
+    }
+
+    .article-body ul li::before {
+      content: '·';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .article-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    .article-footer {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .article-footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .article-footer a:hover { text-decoration: underline; }
+
+    .back-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .back-section a {
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color .2s;
+    }
+
+    .back-section a:hover { color: var(--accent); }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 1.55rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="header-name" href="index.html">Marco Panizzari</a>
+  <a class="back-link" href="index.html">← Tutti gli articoli</a>
+</header>
+
+<main>
+
+  <div class="article-meta">
+    <span class="post-tag">Volontariato</span>
+    <span class="article-date">Aprile 2025</span>
+  </div>
+
+  <h1>Dai dati alle persone</h1>
+
+  <p class="article-intro">
+    Non avevo in programma di fare il Data Analyst per AVIS. È successo un po' alla volta.
+  </p>
+
+  <div class="article-body">
+
+    <p>
+      Sono partito come tanti: donatore. Poi è arrivato il ruolo da consigliere. E a un certo
+      punto mi sono accorto che stavo portando dentro AVIS quello che faccio tutti i giorni al
+      lavoro: lavorare sui dati, costruire modelli, cercare di capire cosa c'è dietro ai numeri.
+    </p>
+
+    <p>Non è stato un cambio di ruolo. È stata più una continuità.</p>
+
+    <h2>A un certo punto ti fai una domanda</h2>
+
+    <p>
+      Lavorando in azienda, i dati li usi per prendere decisioni: vendite, marketing,
+      organizzazione. Poi ti fermi e pensi: ma queste competenze, fuori da lì, possono servire?
+    </p>
+
+    <p>Nel mio caso la risposta è stata sì.</p>
+
+    <p>E oggi mi ritrovo a fare un po' di tutto:</p>
+
+    <ul>
+      <li>estraggo i dati</li>
+      <li>li sistemo (quando ci riesco…)</li>
+      <li>costruisco un modello</li>
+      <li>provo a renderli leggibili con qualche dashboard decente</li>
+      <li>e soprattutto cerco di capire cosa ci stanno dicendo</li>
+    </ul>
+
+    <p>
+      In altri contesti questo lavoro lo fanno in più persone. Qui no. E devo dire che,
+      anche se a volte è complicato, è una palestra incredibile.
+    </p>
+
+    <h2>Il punto non sono i numeri</h2>
+
+    <p>
+      La tentazione è quella di fermarsi ai dati. Guardarli, commentarli, magari fare anche
+      dei bei grafici. Ma non serve a molto.
+    </p>
+
+    <p>Il passaggio vero è un altro: usare quei dati per fare scelte migliori.</p>
+
+    <p>Nel nostro caso gli obiettivi sono molto concreti:</p>
+
+    <ul>
+      <li>far tornare i donatori con più continuità</li>
+      <li>aumentare il numero di donazioni</li>
+      <li>indirizzare meglio (oggi, per esempio, sul plasma)</li>
+      <li>trovare nuovi donatori</li>
+      <li>coinvolgere di più giovani e donne</li>
+    </ul>
+
+    <p>I dati servono a togliere un po' di "sensazione" e mettere più "direzione".</p>
+
+    <h2>Dalla percezione alle priorità</h2>
+
+    <p>
+      Senza dati si ragiona un po' a intuito. Che va bene, fino a un certo punto.
+      Con i dati inizi a vedere cose che prima non vedevi:
+    </p>
+
+    <ul>
+      <li>comportamenti</li>
+      <li>abitudini</li>
+      <li>momenti critici</li>
+      <li>opportunità</li>
+    </ul>
+
+    <p>
+      E soprattutto inizi a capire dove ha senso intervenire davvero. Le dashboard, in questo,
+      sono solo uno strumento. Non servono a fare scena. Servono a decidere.
+    </p>
+
+    <h2>Poi c'è tutta la parte di comunicazione</h2>
+
+    <p>
+      Qui non lavoro da solo. Con mia moglie stiamo costruendo un piccolo percorso anche sui
+      contenuti: cosa raccontare, come farlo, con che continuità. Perché anche qui il rischio
+      è fare cose "a caso" — postare ogni tanto, senza una direzione.
+    </p>
+
+    <p>Invece l'obiettivo è un altro:</p>
+
+    <ul>
+      <li>far capire cosa significa davvero donare</li>
+      <li>creare un minimo di appartenenza</li>
+      <li>avvicinare persone che magari non ci hanno mai pensato</li>
+    </ul>
+
+    <p>E anche qui, se ci pensi, i dati aiutano.</p>
+
+    <h2>Una cosa che non mi aspettavo</h2>
+
+    <p>
+      Questa esperienza mi sta allenando molto più del previsto. Perché mi trovo a gestire
+      tutto il ciclo: dal dato grezzo fino alla decisione. In azienda spesso lavori su un pezzo.
+      Qui devi tenere insieme tutto. E questo ti costringe a semplificare, a scegliere,
+      a capire cosa conta davvero.
+    </p>
+
+    <h2>E poi c'è il punto più importante</h2>
+
+    <p>Qui i numeri non sono numeri. Sono persone.</p>
+
+    <p>
+      Sono disponibilità a donare. Sono tempo. Sono salute messa a disposizione degli altri.
+      E in molti casi sono vite che, grazie a tutto questo, vanno avanti.
+    </p>
+
+    <p>Questo cambia completamente il modo in cui guardi anche una semplice tabella.</p>
+
+    <h2>In fondo</h2>
+
+    <p>
+      Non so se questo sia il modo "giusto" di fare volontariato. So però che per me è
+      diventato il modo più naturale. Mettere insieme quello che so fare con qualcosa in cui credo.
+    </p>
+
+    <p>
+      E vedere che, anche partendo da un file Excel o da una dashboard, puoi contribuire —
+      anche solo un po' — a fare funzionare meglio qualcosa che ha un impatto reale.
+    </p>
+
+    <hr class="article-divider">
+
+    <p class="article-footer">
+      Sei donatore AVIS o lavori con i dati nel volontariato? Scrivimi su
+      <a href="https://www.linkedin.com/in/marcopanizzari/" target="_blank">LinkedIn</a>,
+      mi fa molto piacere confrontarmi.
+    </p>
+
+  </div>
+
+  <div class="back-section">
+    <a href="index.html">← Torna a tutti gli articoli</a>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 Marco Panizzari ·
+  Ospitato su <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+</footer>
+
+</body>
+</html>
