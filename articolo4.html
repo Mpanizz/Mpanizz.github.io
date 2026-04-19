@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il giorno che mia moglie mi ha salvato dal caos · Marco Panizzari</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f4ef;
+      --ink: #1a1612;
+      --muted: #7a7068;
+      --accent: #1a5c9e;
+      --accent-light: #e8f0f8;
+      --border: #e0d9d0;
+      --max-w: 680px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg);
+    }
+
+    .header-name {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .header-name:hover { color: var(--accent); }
+
+    .back-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color .2s;
+    }
+
+    .back-link:hover { color: var(--accent); }
+
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 5rem;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .post-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 4px;
+      padding: 0.1rem 0.5rem;
+    }
+
+    .article-date { font-size: 0.82rem; color: var(--muted); }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .article-intro {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 1.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .article-body p {
+      margin-bottom: 1.4rem;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .article-body h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 2.5rem 0 0.9rem;
+    }
+
+    .article-body strong { color: var(--ink); font-weight: 500; }
+    .article-body em { font-style: italic; }
+
+    .article-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    .article-footer {
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .article-footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .article-footer a:hover { text-decoration: underline; }
+
+    .back-section {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .back-section a {
+      font-size: 0.88rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color .2s;
+    }
+
+    .back-section a:hover { color: var(--accent); }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 1.55rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="header-name" href="index.html">Marco Panizzari</a>
+  <a class="back-link" href="index.html">← Tutti gli articoli</a>
+</header>
+
+<main>
+
+  <div class="article-meta">
+    <span class="post-tag">Crescita Personale</span>
+    <span class="article-date">Gennaio 2025</span>
+  </div>
+
+  <h1>Il giorno che mia moglie mi ha salvato dal caos</h1>
+
+  <p class="article-intro">
+    C'è un'immagine che mi è rimasta impressa. Sono in salotto, sul tavolo c'è di tutto.
+    Mia moglie mi guarda. Non dice niente. Qualche giorno dopo torna a casa con un libro.
+  </p>
+
+  <div class="article-body">
+
+    <p>
+      Sul tavolo: i documenti del mutuo, il libretto delle vaccinazioni di mia figlia appena nata,
+      un report di fine mese, delle note spese, schede clienti. Un'accozzaglia. Io ci nuotavo dentro
+      come se fosse normale.
+    </p>
+
+    <p>
+      Mia moglie aveva lavorato in un museo in Norvegia, dove aveva seguito un corso di organizzazione
+      del lavoro. Il libro era quello del docente, o comunque un testo che era stato centrale in
+      quell'esperienza. Si chiamava <em>The Personal Efficiency Program</em>, di Kerry Gleeson.
+      Un bestseller che, nel tempo, ha cambiato il modo di lavorare di oltre un milione di persone
+      nel mondo.
+    </p>
+
+    <p>Io non lo sapevo ancora. Lo stavo solo sfogliando, un po' distratto, un po' scettico.</p>
+
+    <h2>Il libro che ho riletto ogni estate per vent'anni</h2>
+
+    <p>
+      Non è un'iperbole: negli ultimi vent'anni ho riletto <em>The Personal Efficiency Program</em>
+      ogni estate, dall'inizio alla fine. Come si fa con i grandi classici — ogni volta ci trovi
+      qualcosa di nuovo, o meglio, trovi te stesso in un momento diverso e quella pagina ti dice
+      qualcosa di diverso.
+    </p>
+
+    <p>
+      Ho preso appunti ogni volta. Ho rinnovato propositi ogni volta. Molti di quei propositi sono
+      diventati parte stabile del mio modo di lavorare. Altri li ho persi nel rumore di fondo —
+      le urgenze, le emergenze, la routine che si mangia le buone intenzioni.
+    </p>
+
+    <p>Ma il seme era piantato. E da lì è iniziato tutto un percorso.</p>
+
+    <h2>Poi è arrivato Cal Newport — per caso</h2>
+
+    <p>
+      Qualche anno dopo, mi ritrovo a parlare con un amico. Noto che ha un libro pieno di
+      segnalibri colorati — uno di quei libri lavorati, vissuti, che si riconoscono a colpo d'occhio.
+      Faccio qualche domanda. Scopro <em>Deep Work</em> di Cal Newport.
+    </p>
+
+    <p>Un'altra piccola rivoluzione.</p>
+
+    <p>
+      Perché <em>The Personal Efficiency Program</em> l'avevo letto praticamente prima dell'avvento
+      massivo delle email, delle notifiche, di tutte quelle micro-interruzioni che oggi ci tengono
+      in superficie per ore e ore. Newport mi ha dato gli strumenti per dare un nome a quello che
+      stava succedendo — e per difendermi.
+    </p>
+
+    <h2>Due libri, una sola direzione</h2>
+
+    <p>
+      Gleeson e Newport non si contraddicono: si completano. Uno ti insegna a organizzare il flusso
+      del lavoro quotidiano. L'altro ti chiede di proteggere il tempo profondo, quello in cui
+      produci davvero qualcosa che vale.
+    </p>
+
+    <p>
+      Insieme mi hanno dato quello che cerco ogni giorno: controllo, chiarezza, la capacità di
+      raccogliere nuove sfide — nel lavoro, nel volontariato, nella vita privata — senza finire
+      sommerso. L'affanno capita ancora, certo. Ma è diventato l'eccezione, non la regola.
+    </p>
+
+    <p>Tutto è cominciato da un tavolo in disordine e da una moglie più lungimirante di me.</p>
+
+    <hr class="article-divider">
+
+    <p class="article-footer">
+      Hai un libro che ti ha cambiato il modo di lavorare? Scrivimi su
+      <a href="https://www.linkedin.com/in/marcopanizzari/" target="_blank">LinkedIn</a> —
+      mi fa sempre piacere confrontarmi.
+    </p>
+
+  </div>
+
+  <div class="back-section">
+    <a href="index.html">← Torna a tutti gli articoli</a>
+  </div>
+
+</main>
+
+<footer>
+  © 2025 Marco Panizzari ·
+  Ospitato su <a href="https://pages.github.com" target="_blank">GitHub Pages</a>
+</footer>
+
+</body>
+</html>
